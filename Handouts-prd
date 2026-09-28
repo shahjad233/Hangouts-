@@ -1,0 +1,78 @@
+HangOut Cafe — Website PRD
+Client: HangOut Cafe (Ye Amruttulya Chai), Nowgong Address: Near Swarnim City, Chhatarpur Road, Nowgong, Distt. Chhatarpur (M.P.) Phone: 8770480966 | Instagram: @hangoutcafe03 | Timing: 11 AM – 11 PM Type: Pure Veg cafe — chai, coffee, shakes, fast food (burger, pizza, noodles, maggi, pasta, rolls)
+
+1. Goal
+Ek fun, mobile-first single-page website jo cafe ki vibe (string-lights, outdoor night hangout, youth crowd) ko online laaye — log menu dekhein, location/timing confirm karein, aur ek tap mein call/order kar sakein. Yeh sales brochure hai, transactional ordering system nahi.
+
+2. Target Users
+Local youth/college crowd, Nowgong & Chhatarpur — mostly mobile browsing.
+New visitors searching "cafe near me" — need address, timing, veg confirmation fast.
+Existing Instagram followers — want quick menu + contact link.
+3. Success Metrics
+Click-to-call rate on "Call Now" button.
+Clicks on Google Maps link / Instagram link.
+Time-on-menu-section (proxy for menu clarity).
+4. Sitemap (single scrolling page + anchors)
+Hero — real storefront photo, name, tagline, Call Now + View Menu CTA, rating/timing strip.
+3D Scroll Story — pinned reel-style section, 6 scenes (details in section 5A).
+About/Story — pure-veg identity, "food is my secret meal, only love" ethos.
+Full Menu — 19 categories in tabs (Chinese, Fries, Sweet Corn, Pav Bhaji, Pizza, Soups, Roll, Biryani, Chhole Special, Paneer Kulche, Mojito, Tea, Coffee, Shake, Sandwich, Maggi, Noodles, Burger, Pasta) with every item and price, plus a real-dish photo strip.
+The Vibe — night hangout / string-lights outdoor seating, with chai photo.
+Reviews — Google rating (4.8, 50 reviews), short summary and six customer testimonials (paraphrased).
+Visit Us — address, timing, phone, Instagram link.
+Footer — social + credit line.
+5A. 3D Scroll Story (UGC / Reel style)
+Ek pinned, scroll-driven section jo Instagram reel jaisa dikhta hai: top pe story progress bars, @hangoutcafe03 handle + Follow button, aur scenes CSS 3D (perspective, translateZ, rotateX/Y) mein camera ki taraf aate-jaate hain. Scroll = timeline; koi video file nahi, isliye page light rehta hai.
+
+#	Scene	Caption	Visual	Motion
+1	Introduction	Where taste finds its true home.	Glowing HangOut sign, string lights, rainy night	Slow push-in (Ken Burns)
+2	Preparation	Crafted with passion.	Close-up skewer + green chutney	Fly-in from depth, tilt
+3	The Sizzle	Sealed with fire.	Skewer over tandoor flames	Live ember particles (canvas)
+4	The Reveal	The Signature Blend.	Sizzling platter on table	Depth swing-in
+5	Enjoyment	Unforgettable moments.	Guest enjoying a bite	Soft parallax
+6	Call to Action	Hang out at HangOut Cafe	Logo, 15% OFF on bill of ₹500*, Nowgong, 11 AM – 11 PM	Call Now + Directions buttons
+Behaviour
+
+Scroll progress maps to scene position; scenes ease (lerp) so motion feels smooth, not jumpy.
+Pointer tilt on desktop; floating light-dots at different depths add parallax.
+Layout: 16:10 card on desktop, 4:5 card on mobile.
+prefers-reduced-motion: scenes stack vertically, no pinning or 3D.
+Offer copy carries "T&C apply"; exact terms must be confirmed by the cafe.
+Content risks to resolve before launch
+
+Storyboard visuals show tandoori pieces that can read as chicken; the cafe is pure veg. Replace with paneer/veg tikka photography.
+Scene 4 image shows "Tandoori Mixed Grill 400g ₹499", which is not on the current menu. Add to menu or replace the photo.
+Source images are low-res (about 417 px wide); supply high-res photos or short clips for a sharper result.
+5. Design Direction
+Client shared two Instagram reels (burger brand: dark, glowing, 3D scroll storytelling — "Line-Up / Build / Sear / Craft" style) as the energy reference: bold, dramatic, cinematic food-first motion. But HangOut Cafe's real identity (from its own photos) is a warm string-light night hangout, not a slick studio-3D burger brand — so the design borrows the reference's confidence and motion-on-scroll feel, but grounds the palette and imagery in the cafe's actual fairy-light, outdoor-seating world rather than copying its neon-magenta look 1:1.
+
+Palette: near-black navy #0B0E14 background, card surface #12161F, warm string-light amber #FFB454 (primary accent/glow), fresh veg-green #6FCF73 (secondary accent, ties to the veg mark on their signage), warm cream text #F5EFE3, muted grey-blue #9AA3B2.
+Type: Unbounded (bold, rounded, energetic) for headings — carries the youthful street-cafe personality; Inter for body/menu text, kept legible and small-town-friendly.
+Layout: left-aligned hero with a soft bokeh/string-light dot field behind the wordmark; menu shown as a horizontally-scrollable "menu board" strip (mirrors how a physical cafe board reads); one orchestrated scroll-reveal on section entry rather than per-card fade spam.
+Motion: subtle drifting bokeh lights in hero, scroll-triggered reveal per section, pulsing glow on the sticky Call button, and the 3D scroll story (section 5A) as the signature moment. No other decorative animation.
+6. Content Requirements
+Full itemised menu (19 categories, all items and prices) as provided by the cafe; prices to be re-verified whenever the printed menu changes.
+Real photography: storefront (hero), dish photos (menu strip), chai photo (vibe), storyboard scenes (3D story).
+Veg-only status stated clearly (trust signal, since name doesn't say it).
+Exact address + phone as verified from Instagram bio / Google listing.
+Google rating (4.8 from 50 reviews at time of build) and paraphrased customer testimonials; refresh periodically as the rating changes.
+7. Functional Requirements
+Tap-to-call button (tel: link), visible in hero and sticky on scroll.
+Tap-to-open Google Maps link.
+Tap-to-open Instagram profile link.
+Fully responsive: mobile-first (primary), then tablet/desktop.
+Fast load: no heavy images required for v1 — CSS/typography-led visuals; real photos can be added in v2 once optimised assets are provided by the client.
+8. Non-Functional Requirements
+Works on low-end Android phones / slower mobile networks (small payload, no video autoplay).
+Accessible: visible focus states, reduced-motion respected, sufficient contrast on dark background.
+No login, no payment, no backend — purely informational in v1.
+9. Out of Scope (v1)
+Online ordering / cart / payment.
+Table reservation system.
+CMS for menu editing (menu updates done by editing the page directly for now).
+10. V2 Ideas (future)
+High-res photos and short video clips for the 3D story (veg tikka, real cafe footage).
+Live Google review widget instead of static testimonials.
+WhatsApp order button.
+Simple menu CMS if item changes become frequent.
+Discount code / coupon flow for the 15% offer.
